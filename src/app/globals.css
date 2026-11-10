@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --paper: #f4f3ed;
+  --paper-card: #fbfaf6;
+  --paper-muted: #eae9e1;
+  --paper-dim: #deded4;
+  --ink: #202923;
+  --copy: #46534b;
+  --muted: #727d74;
+  --rule: #d4d7ce;
+  --field: #4e6c56;
+  --field-deep: #385340;
+  --brass: #ad7040;
+  --good: #3f684b;
+  --bad: #a8533f;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-card: var(--paper-card);
+  --color-paper-muted: var(--paper-muted);
+  --color-paper-dim: var(--paper-dim);
+  --color-ink: var(--ink);
+  --color-copy: var(--copy);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-field: var(--field);
+  --color-field-deep: var(--field-deep);
+  --color-brass: var(--brass);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+::selection { color: var(--paper-card); background: var(--field); }
+button, select { font: inherit; }
+button:active { transform: scale(0.985); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
